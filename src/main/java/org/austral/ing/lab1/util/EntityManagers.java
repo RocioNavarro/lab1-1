@@ -1,4 +1,4 @@
-package austral.ing.lab1.util;
+package org.austral.ing.lab1.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

@@ -1,10 +1,9 @@
-package austral.ing.lab1.util;
+package org.austral.ing.lab1.util;
 
 import javax.persistence.EntityTransaction;
-
 import java.util.function.Supplier;
 
-import static austral.ing.lab1.util.EntityManagers.currentEntityManager;
+import static org.austral.ing.lab1.util.EntityManagers.currentEntityManager;
 
 public class Transactions {
 

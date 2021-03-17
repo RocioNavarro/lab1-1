@@ -1,8 +1,6 @@
-package austral.ing.lab1.util;
+package org.austral.ing.lab1.util;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.RandomAccess;
 
 public class LangUtils {
 
@@ -17,7 +15,6 @@ public class LangUtils {
   public static String notEmpty(String value, String defaultValue) {
     return value == null || value.isEmpty() ? defaultValue : value;
   }
-
 
   public static <E> List<E> checkedList(List list) {
     //noinspection unchecked

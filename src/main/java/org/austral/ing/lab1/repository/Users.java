@@ -1,17 +1,16 @@
-package austral.ing.lab1.entity;
+package org.austral.ing.lab1.repository;
 
-import austral.ing.lab1.model.User;
-import austral.ing.lab1.util.LangUtils;
+
+import org.austral.ing.lab1.model.User;
+import org.austral.ing.lab1.util.LangUtils;
 
 import javax.persistence.EntityTransaction;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Supplier;
 
-import static austral.ing.lab1.util.EntityManagers.currentEntityManager;
-import static austral.ing.lab1.util.LangUtils.checkedList;
-import static austral.ing.lab1.util.Transactions.tx;
+import static org.austral.ing.lab1.util.EntityManagers.currentEntityManager;
+import static org.austral.ing.lab1.util.LangUtils.checkedList;
+import static org.austral.ing.lab1.util.Transactions.tx;
 
 public class Users {
 
