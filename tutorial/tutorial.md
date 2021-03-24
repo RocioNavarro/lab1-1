@@ -43,4 +43,7 @@ Esto es un tutorial para correr esta applicación en un Tomcat server.
 
    ![](./img/10.png)
 
-8. 
+8. Entren a *localhost:8080/*
+
+
+![](./img/12.png)
