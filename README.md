@@ -35,3 +35,6 @@ Stack
 * JPA  implementado por HIbernate: Librería ORM
 * HSQL: Motor de base de datos
 * Bootstrap: Librería de front-end para el diseño de web apps https://getbootstrap.com/
+
+
+[Tutorial para configura Tomcat](/tutorial/tutorial.md)
