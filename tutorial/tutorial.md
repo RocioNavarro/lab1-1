@@ -1,6 +1,6 @@
 # Levantar TomCat Server
 
-Esto es un tutorial para correr esta applicación en un Tomcat server, con su base de datos
+Esto es un tutorial para correr esta applicación en un Tomcat server.
 
 1. Descargar Tomcat https://tomcat.apache.org/download-10.cgi (el .zip) . Tomcat es un servidor, al cual le das el .war de tu projecto (es como un .jar pero para web por eso la w) y lo corre.
 2. Descomprimir el zip en algún directorio.
@@ -30,10 +30,17 @@ Esto es un tutorial para correr esta applicación en un Tomcat server, con su ba
    
    ![](./img/9.png)
 
+
+6. En la tab de **Deployment** en **Application Context** borrar lo que hay y dejar  la barra sola `/`
+ 
+
+![](./img/11.png)
    
+6. Levantar la base de datos `cd bin` `./startDb.sh`
+
+7. Darle run a la aplicación, somos desarrolladores asi que siempre en debug mode
 
 
+   ![](./img/10.png)
 
-
-
-
+8. 
