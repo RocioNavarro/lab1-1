@@ -59,8 +59,6 @@ public class UsersTest {
         entityManager.persist(luke);
         entityManager.persist(leia);
 
-
-
         final List<User> allUsers = entityManager
                 .createQuery("SELECT u FROM User u", User.class)
                 .getResultList();
