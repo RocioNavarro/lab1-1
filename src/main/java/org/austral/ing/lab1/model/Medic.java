@@ -1,9 +1,12 @@
 package org.austral.ing.lab1.model;
 
+import com.google.common.collect.Multimap;
 import com.sun.istack.NotNull;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.eclipse.jetty.util.MultiMap;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -25,6 +28,9 @@ public class Medic {
 
     @Column(name = "CONTACTO")
     private int contact;
+
+    @ManyToMany(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    private List<Patient> patients = new ArrayList<>();
     public Medic() {
 
     }
@@ -65,5 +71,14 @@ public class Medic {
     public int getContact() {
         return contact;
     }
+    public void addPatient(Patient patient){
+        patients.add(patient);
+        patient.getMedics().add(this);
+    }
+
+    public List<Patient> getPatients() {
+        return patients;
+    }
+
 
 }

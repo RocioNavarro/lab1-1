@@ -1,13 +1,14 @@
 package org.austral.ing.lab1.model;
 
 
+import org.austral.ing.lab1.persistence.Medics;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 
 @Entity
 public class Patient {
@@ -38,6 +39,8 @@ public class Patient {
     @Column(name = "CONTACTO")
     private int contact;
 
+    @ManyToMany(mappedBy = "patients")
+    private List<Medic> medics = new ArrayList<>();
     public Patient() {
 
     }
@@ -88,6 +91,8 @@ public class Patient {
         return contact;
     }
 
-
+    public List<Medic> getMedics() {
+        return medics;
+    }
 }
 

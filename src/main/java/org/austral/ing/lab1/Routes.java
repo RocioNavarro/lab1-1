@@ -19,16 +19,15 @@ public static final String Register_Template_Patient = "RegisterPatient.ftl";
 public static final String Register_Template_Medic = "RegisterMedic.ftl";
 public static final String LoginP_Template = "LoginPatient.ftl";
 public static final String LoginM_Template = "LoginMedic.ftl";
-private static final String HomeM_Template = "HomeMedic.ftl";
+private static final String HomeM_Template = "StartingHomePage.ftl";
 
 public static final String LoginP_Route = "/login_patient";
 public static final String LoginM_Route = "/login_medic";
 public static final String RegisterPatient_Route = "/register_patient";
 public static final String RegisterMedic_Route = "/register_medic";
-public static final String HomeP_Route = "/home_patient";
-public static final String HomeM_Route = "/home_medic";
+public static final String Home_Route = "/home";
 public static final String Logout_route = "/logout";
-public static final String Patients_List = HomeM_Route + "/list_patients";
+public static final String Patients_List ="/list_patients";
 
 private HCSystem system;
 
@@ -92,14 +91,14 @@ private HCSystem system;
         post(LoginM_Route, (request, response) -> {
             final LoginMedicRequest form = LoginMedicRequest.createFromBody(request.body());
             if (system.checkLoginMedic(form).isPresent()) {
-                response.redirect(HomeM_Route);
+                response.redirect(Home_Route);
                 return halt();
             }else{
                 final Map<String,Object> model = Map.of("message", "Not a registered Medic, Please try again");
                 return render(model, LoginM_Template);
             }
         });
-        get(HomeM_Route, (request, response) -> render(HomeM_Template));
+       // get(Home_Route, (request, response) -> .redirect("/home"));
 
 
         }

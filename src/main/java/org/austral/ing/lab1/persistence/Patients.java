@@ -38,4 +38,10 @@ public class Patients {
     public List<Patient> list(){
         return entityManager.createQuery("select u from Patient u", Patient.class).getResultList();
     }
+
+    public Optional<Patient> findByMHN(int mhn) {
+        return entityManager.createQuery("SELECT u FROM Patient u WHERE u.medicalHistoryNumber LIKE :mhn", Patient.class)
+                .setParameter("mhn",mhn).getResultList().stream()
+                .findFirst();
+    }
 }
