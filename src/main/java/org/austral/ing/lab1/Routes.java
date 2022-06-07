@@ -76,7 +76,11 @@ private HCSystem system;
             }
         });
 
-        get(LoginP_Route, (request, response) -> render(LoginP_Template));
+        get(LoginP_Route, (request, response) -> {
+            response.redirect("/LoginPatient.html");
+            return halt();
+        });
+
         post(LoginP_Route, (request, response) -> {
             final LoginPatientRequest form = LoginPatientRequest.createFromBody(request.body());
             if (system.checkLoginPatient(form).isPresent()) {
@@ -84,7 +88,8 @@ private HCSystem system;
                 return halt();
             }else{
                 final Map<String,Object> model = Map.of("message", "Not a registered Patient, Please try again");
-                return render(model, LoginP_Template);
+                redirect.get(LoginP_Route, "/LoginPatient.html");
+                return halt();
                 }
         });
         get(LoginM_Route, (request, response) -> render(LoginM_Template));
@@ -98,7 +103,9 @@ private HCSystem system;
                 return render(model, LoginM_Template);
             }
         });
-       // get(Home_Route, (request, response) -> .redirect("/home"));
+        get(Home_Route, (request, response) -> {
+            response.redirect("/home.html");
+        return halt();});
 
 
         }
