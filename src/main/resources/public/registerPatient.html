@@ -2,33 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-    <link href="//public/css/register.css" rel="stylesheet" id="bootstrap-css">
-
+    <title>Registro Paciente</title>
+    <!-- Fonts CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 </head>
 <body>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link href="css/stylesSM.css" rel="stylesheet">
 
 
 <div class="container">
 
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
-            <h4 class="card-title mt-3 text-center">Iniciar sesión como médico</h4>
+            <h4 class="card-title mt-3 text-center">Iniciar sesión como paciente</h4>
 
             <form>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Nombre y apellido" type="text">
+                    <input name="name" class="form-control" placeholder="Nombre" type="text">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="lastname" class="form-control" placeholder="Apellido" type="text">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fas fa-birthday-cake"></i> </span>
+                    </div>
+                    <input name="dateOfBirth" class="form-control" placeholder="Fecha de nacimiento" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-address-card"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Número de matrícula" type="text">
+                    <input name="dni" class="form-control" placeholder="Número de documento" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -40,34 +52,20 @@
                         <option value="2">+198</option>
                         <option value="3">+701</option>
                     </select>
-                    <input name="" class="form-control" placeholder="Número de teléfono" type="text">
+                    <input name="contact" class="form-control" placeholder="Número de teléfono" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-stethoscope"></i> </span>
                     </div>
                     <select class="form-control">
-                        <option selected=""> Especialidad</option>
-                        <option>Médico clínico</option>
-                        <option>Traumatología</option>
-                        <option>Dermatología</option>
-                        <option>Cardiología</option>
-                        <option>Cirugía</option>
-                        <option>Gastronterología</option>
-                        <option>Gineoclogía</option>
-                        <option>Hematología</option>
-                        <option>Infectología</option>
-                        <option>Nurición</option>
-                        <option>Neumonología</option>
-                        <option>Oftalmología</option>
-                        <option>Oncología</option>
-                        <option>Pediatría</option>
-                        <option>Psicología</option>
-                        <option>Psiquiatría</option>
-                        <option>Oftalmología</option>
-                        <option>Toxicología</option>
-                        <option>Urología</option>
-                    </select>
+                        <option selected=""> Obra social</option>
+                        <option>Austral Salud</option>
+                        <option>Osde</option>
+                        <option>Omint</option>
+                        <option>Galeno</option>
+                        <option>Medicus</option>
+                       </select>
                 </div> <!-- form-group end.// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -82,9 +80,9 @@
                     <input class="form-control" placeholder="Repetir contraseña" type="password">
                 </div> <!-- form-group// -->
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                    <button type="submit" class="btn btn-primary btn-block"> Registrar  </button>
                 </div> <!-- form-group// -->
-                <p class="text-center">Have an account? <a href="">Log In</a> </p>
+                <p class="text-center">Ya estás registrado? <a href="">Iniciar sesión</a> </p>
             </form>
         </article>
     </div> <!-- card.// -->
