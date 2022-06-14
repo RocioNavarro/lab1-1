@@ -17,24 +17,24 @@
         <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title mt-3 text-center">Iniciar sesión como médico</h4>
 
-            <form>
+            <form action="http://localhost:4321/register_medic" method="post">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Nombre" type="text">
+                    <input id= "name" name="name" class="form-control" placeholder="Nombre" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Apellido" type="text">
+                    <input id="lastname" name="lastname" class="form-control" placeholder="Apellido" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-address-card"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Número de matrícula" type="text">
+                    <input id= "matricula" name="matricula" class="form-control" placeholder="Número de matrícula" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -46,7 +46,7 @@
                         <option value="2">+198</option>
                         <option value="3">+701</option>
                     </select>
-                    <input name="" class="form-control" placeholder="Número de teléfono" type="text">
+                    <input id= "contact" name="contact" class="form-control" placeholder="Número de teléfono" type="text">
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
@@ -63,7 +63,7 @@
                         <option>Gineoclogía</option>
                         <option>Hematología</option>
                         <option>Infectología</option>
-                        <option>Nurición</option>
+                        <option>Nutrición</option>
                         <option>Neumonología</option>
                         <option>Oftalmología</option>
                         <option>Oncología</option>
